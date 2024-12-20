@@ -18,6 +18,7 @@ CREATE TABLE IF NOT EXISTS chanson (
     chemin VARCHAR(255) NOT NULL,
     vote INT DEFAULT 0,
     utilisateur_id INT NOT NULL,
+    isValid BOOLEAN DEFAULT false,
     FOREIGN KEY (utilisateur_id) REFERENCES utilisateurs(id) ON DELETE CASCADE
 );
 
