@@ -1,3 +1,12 @@
+<?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
+include_once '../../../back/modeles/Chanson.php';
+
+$chanson = new Chanson();
+$allValidChansons = $chanson->getValidSongs();
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -26,7 +35,7 @@
                 <?php
                 require_once '../../../back/controller/voteController.php';
                 $chansons = getChansons(); // Appel de la fonction pour récupérer les chansons
-                foreach ($chansons as $chanson) {
+                foreach ($allValidChansons as $chanson) {
                     echo "<li>
                         <h3>{$chanson['nom']}</h3>
                         <p>Nombre de votes : {$chanson['vote']}</p>
