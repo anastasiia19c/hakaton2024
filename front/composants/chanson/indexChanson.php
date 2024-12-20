@@ -25,7 +25,7 @@ if (!isset($_SESSION['id'])) {
             <form action="../../../back/controller/chansonController.php" method="POST" enctype="multipart/form-data">
                 <div>
                     <label for="nom">Nom de la chanson :</label>
-                    <input id="nom" name="nomChanson" type="text" required>
+                    <input id="nom" name="nom" type="text" required>
                 </div>
                 <div>
                     <label for="file">Fichier audio ou vidéo :</label>
