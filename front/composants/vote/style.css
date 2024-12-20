@@ -32,7 +32,7 @@ header {
   font-size: 2.5rem;
   margin-bottom: 20px;
   color: #ffb703;
-  text-shadow: 2px 2px #fb8500;
+  text-shadow: 4px 2px #000000;
 }
 
 .container ul {
@@ -54,6 +54,10 @@ h1{
   padding: 1%;
   border-radius: 10px;
 }
+form{
+  align-items: center;
+  text-align: center;
+}
 
 li {
     text-align:justify;
@@ -66,7 +70,7 @@ li {
 
 button {
   align-self: center;
-  margin-top: 20px;
+  margin: 15px;
   background: #CC231E;
   color: #ffffff;
   padding: 10px 20px;

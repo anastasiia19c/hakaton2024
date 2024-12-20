@@ -29,16 +29,21 @@ $allValidChansons = $chanson->getValidSongs();
     </header>
     <main class="vote">
         <div class="container">
-        <h1>Voter pour la meilleure chanson de Noël 2024</h1>
-            <h2>Liste des chansons de Noël</h2>
+        <h1>Votez pour la meilleure chanson de Noël 2024</h1>
+        <h2>Liste des chansons de Noël</h2>
             <ul>
                 <?php
                 require_once '../../../back/controller/voteController.php';
-                $chansons = getChansons(); // Appel de la fonction pour récupérer les chansons
+                $chansons = getChansons(); 
                 foreach ($allValidChansons as $chanson) {
+                    $audioUrl = $chanson['chemin'];  
                     echo "<li>
                         <h3>{$chanson['nom']}</h3>
                         <p>Nombre de votes : {$chanson['vote']}</p>
+                        <audio controls>
+                            <source src='../{$audioUrl}' type='audio/mpeg'>
+                            Votre navigateur ne supporte pas l'élément audio.
+                        </audio>
                         <form method='POST' action='../../../back/controller/voteController.php'>
                             <input type='hidden' name='chanson_id' value='{$chanson['id']}'>
                             <button type='submit' name='vote'>Voter</button>
