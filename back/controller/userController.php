@@ -25,7 +25,7 @@ class InscriptionController
             $user = new User($nom, $prenom, $date_naissance, $adresse_postale, $email, $pseudo, $password);
 
             if ($user->createUser()) {
-                echo "Inscription réussie !";
+                header("Location: ../../front/composants/connexion/index.php");
             } else {
                 echo "Erreur lors de l'inscription. Veuillez réessayer.";
             }

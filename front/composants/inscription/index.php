@@ -20,13 +20,13 @@
             <input type="date" id="date_naissance" name="date_naissance" required>
 
             <label for="adresse_postale">Adresse postale :</label>
-            <input type="text" id="adresse_postale" name="adresse_postale" placeholder="Adresse e-mail" required>
+            <input type="text" id="adresse_postale" name="adresse_postale" placeholder="Adresse postale" required>
 
             <label for="email">Adresse e-mail :</label>
             <input type="email" id="email" name="email" placeholder="Adresse e-mail" required>
 
             <label for="pseudo">Pseudo :</label>
-            <input type="text" id="pseudo" name="pseudo" placeholder="Mot de passe" required>
+            <input type="text" id="pseudo" name="pseudo" placeholder="Pseudo" required>
 
             <label for="password">Mot de passe :</label>
             <input type="password" id="password" name="password" placeholder="Mot de passe" required>

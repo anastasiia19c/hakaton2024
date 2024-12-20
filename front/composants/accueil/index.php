@@ -52,8 +52,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
         <main class="main-content">
             <div class="welcome-div">
-                <h1>Bienvenue sur notre site, <?php echo $_SESSION['nom']; ?>!</h1>                
-                <p>Ici, profitez de l'ambiance féérique de Noël avec cette animation de flocons de neige.</p>
+                <h1>Bienvenue sur Chantons Noël, <?php echo $_SESSION['nom']; ?>!</h1>                
+                <p>L’association "Chantons Noël" propose chaque année un concours de chant permettant au vainqueur de voir sa chanson promue et 
+                    diffusée lors des marchés de Noël d'Alsace et être sélectionnée pour un prime spécial "Noël" de la Star Academy.</p>
                 <p>Vous êtes connecté avec l'adresse e-mail : <?php echo $_SESSION['email']; ?></p>
 
             </div>
