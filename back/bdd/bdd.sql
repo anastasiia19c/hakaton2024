@@ -15,10 +15,12 @@ CREATE TABLE IF NOT EXISTS utilisateurs (
 
 CREATE TABLE IF NOT EXISTS chanson (
     id INT AUTO_INCREMENT PRIMARY KEY,
+    nom VARCHAR(255) NOT NULL,
     chemin VARCHAR(255) NOT NULL,
     vote INT DEFAULT 0,
     utilisateur_id INT NOT NULL,
     isValid BOOLEAN DEFAULT false,
     FOREIGN KEY (utilisateur_id) REFERENCES utilisateurs(id) ON DELETE CASCADE
 );
+
 
