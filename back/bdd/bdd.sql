@@ -13,11 +13,11 @@ CREATE TABLE IF NOT EXISTS utilisateurs (
     password VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE chanson (
+CREATE TABLE IF NOT EXISTS chanson (
     id INT AUTO_INCREMENT PRIMARY KEY,
     chemin VARCHAR(255) NOT NULL,
     vote INT DEFAULT 0,
-    user_id INT NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+    utilisateur_id INT NOT NULL,
+    FOREIGN KEY (utilisateur_id) REFERENCES utilisateurs(id) ON DELETE CASCADE
 );
 
