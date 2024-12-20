@@ -48,7 +48,12 @@ header {
   border-radius: 5px;
   font-size: 1rem;
 }
-
+h1{
+  color: #FFF;
+  background-color: #CC231E;
+  padding: 1%;
+  border-radius: 10px;
+}
 
 li {
     text-align:justify;
@@ -62,7 +67,7 @@ li {
 button {
   align-self: center;
   margin-top: 20px;
-  background: #2788a0;
+  background: #CC231E;
   color: #ffffff;
   padding: 10px 20px;
   border: none;
@@ -70,10 +75,12 @@ button {
   font-size: 1.2rem;
   cursor: pointer;
   transition: background 0.3s;
+  align-items: center;
+  justify-content: center;
 }
 
 button:hover {
-  background: #fb8500;
+  background: #F5624D;
 }
 
 .snowflake {

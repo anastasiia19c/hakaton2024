@@ -38,7 +38,7 @@ class ChansonController
                 try {
                     $chanson = new Chanson();
                     $chanson->ajouterChanson($nom, $targetFilePath, $userId);
-
+                    header("Location: ../../front/composants/vote/vote.php"); 
                     echo "La chanson a été téléchargée avec succès.";
                 } catch (Exception $e) {
                     echo $e->getMessage();

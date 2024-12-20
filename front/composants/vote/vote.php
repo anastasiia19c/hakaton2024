@@ -17,10 +17,10 @@
             <li><a href="../classement/classement.php" class="btn">Classement</a></li>
         </ul>
     </nav>
-        <h1>Voter pour la meilleure chanson de Noël 2024</h1>
     </header>
     <main class="vote">
         <div class="container">
+        <h1>Voter pour la meilleure chanson de Noël 2024</h1>
             <h2>Liste des chansons de Noël</h2>
             <ul>
                 <?php
