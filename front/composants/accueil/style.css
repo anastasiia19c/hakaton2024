@@ -136,3 +136,53 @@ p{
     animation-duration: 14s;
     animation-delay: 0s;
 }
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+/* Boutons stylés */
+.btn {
+    background: #397218;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #21d121;
+}
+
+/* Ajout d'espacement dans le conteneur principal */
+.container {
+    margin-top: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Pied de page */
+.footer {
+    text-align: center;
+    margin-top: 20px;
+}
+

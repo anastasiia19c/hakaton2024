@@ -159,3 +159,37 @@ form button:hover {
         width: 80%; /* Prend toute la largeur de l'écran */
     }
 }
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+}
+
+/* Boutons stylés */
+.btn {
+    background: #397218;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #21d121;
+}
