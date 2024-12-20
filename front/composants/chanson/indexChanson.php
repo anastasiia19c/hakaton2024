@@ -30,16 +30,19 @@ if (!isset($_SESSION['id'])) {
     <main>
         <div>
             <h2>Poster une chanson</h2>
-            <form>
+            <form action="../../../back/controller/chansonController.php" method="POST" enctype="multipart/form-data">
                 <div>
-                    <label for="file">Poster une chanson de Noël :</label>
-                    <input id="file" type="file" accept="audio/*,video/*">
+                    <label for="nom">Nom de la chanson :</label>
+                    <input id="nom" name="nom" type="text" required>
+                </div>
+                <div>
+                    <label for="file">Fichier audio ou vidéo :</label>
+                    <input id="file" name="file" type="file" accept="audio/*,video/*" required>
                 </div>
                 <div>
                     <button type="submit">Poster</button>
                 </div>
             </form>
-
         </div>
     </main>
 
@@ -50,5 +53,3 @@ if (!isset($_SESSION['id'])) {
     </footer>
 </body>
 </html>
-
-<?php
