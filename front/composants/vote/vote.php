@@ -6,22 +6,30 @@
     <link href="style.css" rel="stylesheet">
     <title>Vote</title>
 </head>
-<body >
+<body>
     <header>
-    <H1>Voter pour la meilleur chanson de Noël 2024</H1>
+        <h1>Voter pour la meilleure chanson de Noël 2024</h1>
     </header>
     <main class="vote">
-    <div class="container">
-    <h2>Liste des chansons de Noël</h2> 
-        <ul>
-            <li><h3>Chanson 1</h3><p>Nombre de vote : </p><button type="submit">Voter</button></li>
-            <li><h3>Chanson 2</h3><p>Nombre de vote : </p><button type="submit">Voter</button></li>
-            <li><h3>Chanson 3</h3><p>Nombre de vote : </p><button type="submit">Voter</button></li>
-            <li><h3>Chanson 4</h3><p>Nombre de vote : </p><button type="submit">Voter</button></li>
-            <li><h3>Chanson 5</h3><p>Nombre de vote : </p><button type="submit">Voter</button></li>
-            <li><h3>Chanson 6</h3><p>Nombre de vote : </p><button type="submit">Voter</button></li>
-        </ul>
-    </div>    
+        <div class="container">
+            <h2>Liste des chansons de Noël</h2>
+            <ul>
+                <?php
+                require_once '../../../back/controller/voteController.php';
+                $chansons = getChansons(); // Appel de la fonction pour récupérer les chansons
+                foreach ($chansons as $chanson) {
+                    echo "<li>
+                        <h3>{$chanson['nom']}</h3>
+                        <p>Nombre de votes : {$chanson['vote']}</p>
+                        <form method='POST' action='../../../back/controller/voteController.php'>
+                            <input type='hidden' name='chanson_id' value='{$chanson['id']}'>
+                            <button type='submit' name='vote'>Voter</button>
+                        </form>
+                    </li>";
+                }
+                ?>
+            </ul>
+        </div>    
     </main>
     <script src="app.js"></script>
 </body>
