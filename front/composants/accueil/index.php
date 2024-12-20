@@ -54,18 +54,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </nav>
 </header>
 
-<div class="container">
-    <div class="header">
-        <h1>🎄 Joyeux Noël 🎁</h1>
-    </div>
-    
-    <main class="main-content">
-        <div class="welcome-div">
-            <h1>Bienvenue sur notre site, <?php echo $_SESSION['nom']; ?>!</h1>                
-            <p>Participez Au concours de chants de Noël !</p>
-            <p>Vous êtes connecté avec l'adresse e-mail : <?php echo $_SESSION['email']; ?></p>
-        </div>
-    </main>
 </div>
     <div class="container">
         <div class="header">
