@@ -26,7 +26,7 @@
             <input type="email" id="email" name="email" placeholder="Adresse e-mail" required>
 
             <label for="pseudo">Pseudo :</label>
-            <input type="text" id="pseudo" name="pseudo" placeholder="Mot de passe" required>
+            <input type="text" id="pseudo" placeholder="Pseudo" required>
 
             <label for="password">Mot de passe :</label>
             <input type="password" id="password" name="password" placeholder="Mot de passe" required>
