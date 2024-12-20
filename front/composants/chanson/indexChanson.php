@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['id'])) {
+    header("Location: ../connexion"); 
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -8,6 +16,7 @@
 </head>
 <body>
     <header>
+        <a href="../../../back/controller/logout.php">Se déconnecter</a>
     </header>
 
     <main>

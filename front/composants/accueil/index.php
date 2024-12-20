@@ -1,4 +1,10 @@
 <?php
+session_start();
+
+if (!isset($_SESSION['id'])) {
+    header("Location: ../connexion"); 
+    exit();
+}
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $targetDir = "uploads/";
     $targetFile = $targetDir . basename($_FILES["file"]["name"]);
@@ -36,7 +42,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="header"></header>
+<header class="header">
+    <a href="../../../back/controller/logout.php">Se déconnecter</a>
+</header>
     <div class="container">
         <div class="header">
             <h1>🎄 Joyeux Noël 🎁</h1>
@@ -44,8 +52,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
         <main class="main-content">
             <div class="welcome-div">
-                <h2>Bienvenue sur notre site !</h2>
+                <h1>Bienvenue sur notre site, <?php echo $_SESSION['nom']; ?>!</h1>                
                 <p>Ici, profitez de l'ambiance féérique de Noël avec cette animation de flocons de neige.</p>
+                <p>Vous êtes connecté avec l'adresse e-mail : <?php echo $_SESSION['email']; ?></p>
+
             </div>
         </main>
         <footer class="footer">

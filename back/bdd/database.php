@@ -11,7 +11,7 @@ class Database
     public function __construct()
     {
         $this->host = "localhost";
-        $this->db_name = "bdd_landing_page";
+        $this->db_name = "bdd_hackaton_2025";
         $this->username = "root";
         $this->password = "";
     }

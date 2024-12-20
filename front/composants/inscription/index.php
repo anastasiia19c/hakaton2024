@@ -9,31 +9,31 @@
 <body>
     <div class="container">
         <h1>Inscription</h1>
-        <form>
+        <form action="../../../back/controller/userController.php" method="POST">
             <label for="nom">Nom :</label> 
-            <input type="text" id="nom" placeholder="Nom" required>
+            <input type="text" id="nom" name="nom" placeholder="Nom" required>
 
             <label for="prenom">Prénom :</label>
-            <input type="text" id="prenom" placeholder="Prénom" required>
+            <input type="text" id="prenom" name="prenom" placeholder="Prénom" required>
 
             <label for="date_naissance">Date de naissance :</label>
-            <input type="date" id="date_naissance" required>
+            <input type="date" id="date_naissance" name="date_naissance" required>
 
             <label for="adresse_postale">Adresse postale :</label>
-            <input type="text" id="adresse_postale" placeholder="Adresse e-mail" required>
+            <input type="text" id="adresse_postale" name="adresse_postale" placeholder="Adresse e-mail" required>
 
             <label for="email">Adresse e-mail :</label>
-            <input type="email" id="email" placeholder="Adresse e-mail" required>
+            <input type="email" id="email" name="email" placeholder="Adresse e-mail" required>
 
-            <label for="pseudo">Mot de passe :</label>
-            <input type="text" id="pseudo" placeholder="Mot de passe" required>
+            <label for="pseudo">Pseudo :</label>
+            <input type="text" id="pseudo" name="pseudo" placeholder="Mot de passe" required>
 
             <label for="password">Mot de passe :</label>
-            <input type="password" id="password" placeholder="Mot de passe" required>
+            <input type="password" id="password" name="password" placeholder="Mot de passe" required>
 
             <button type="submit">S'inscrire</button>
         </form>
-        <a class ="lien" href = "../connexion" >Se connecter</a>
+        <a class="lien" href="../connexion">Se connecter</a>
     </div>
     <script src="app.js"></script>
 </body>
