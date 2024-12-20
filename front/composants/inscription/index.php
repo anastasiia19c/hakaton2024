@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+</header>
     <div class="container">
         <h1>Inscription</h1>
         <form action="../../../back/controller/userController.php" method="POST">

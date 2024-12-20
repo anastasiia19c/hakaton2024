@@ -10,13 +10,21 @@ if (!isset($_SESSION['id'])) {
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styleChanson.css"></link>
+    <link rel="stylesheet" href="ChantStyles.css"></link>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
     <title>Chanson</title>
 </head>
 <body>
     <header>
-        <a href="../../../back/controller/logout.php">Se déconnecter</a>
+    <nav class="navbar">
+        <a href="../../../back/controller/logout.php" class="btn">Se déconnecter</a>
+        <ul>
+            <li><a href="../accueil/index.php" class="btn">Accueil</a></li>
+            <li><a href="../vote/vote.php" class="btn">Vote</a></li>
+            <li><a href="../chanson/indexChanson.php" class="btn">Ajouter une chanson</a></li>
+            <li><a href="../classement/classement.php" class="btn">Classement</a></li>
+        </ul>
+    </nav>
     </header>
 
     <main>
