@@ -61,4 +61,14 @@ class Chanson
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+    public static function trouverChansonParUtilisateur($userId)
+    {
+        $pdo = (new Database())->getConnection(); 
+        $sql = "SELECT * FROM chanson WHERE utilisateur_id = :userId LIMIT 1";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':userId', $userId, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
 }

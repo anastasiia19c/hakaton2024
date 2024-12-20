@@ -18,6 +18,13 @@ class ChansonController
             $file = $_FILES['file'];
             $nom = $_POST['nom']; 
 
+            // Vérification si l'utilisateur a déjà téléchargé une chanson
+            $chansonExistante = Chanson::trouverChansonParUtilisateur($userId);
+            if ($chansonExistante) {
+                echo "Vous avez déjà téléchargé une chanson.";
+                exit();
+            }
+
             $uploadDir = '../../uploads/';
             if (!is_dir($uploadDir)) {
                 mkdir($uploadDir, 0777, true);
@@ -54,3 +61,4 @@ class ChansonController
 
 $controller = new ChansonController();
 $controller->handlePost();
+?>
