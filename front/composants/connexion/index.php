@@ -24,5 +24,6 @@
         <p>Pas encore de compte ?</p>
         <a href="../inscription">Créer un compte</a>
     </div>
+    <script src="app.js"></script>
 </body>
 </html>
