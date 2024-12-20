@@ -5,6 +5,7 @@ body {
     background: url('../../public/img/winter-1791370_1280.jpg') no-repeat center top;
     background: linear-gradient(to bottom, #6dd5fa, #ffffff);
     color: #333;
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -23,6 +24,7 @@ header {
     background: rgba(255, 255, 255, 0.9);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
+    height: 100vh;
 }
 p{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
