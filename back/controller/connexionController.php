@@ -1,34 +1,54 @@
 <?php
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-include_once '../modeles/User.php';
 session_start();
+include_once '../modeles/Chanson.php';
 
-class ConnexionController
+class ChansonController
 {
-    public function handleForm()
+    public function handlePost()
     {
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            $email = $_POST['email'];
-            $password = $_POST['password'];
+        if (!isset($_SESSION['id'])) {
+            header("Location: ../connexion");
+            exit();
+        }
 
-            $authenticatedUser = User::authenticateUser($email, $password);
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['file'])) {
+            $userId = $_SESSION['id'];
+            $file = $_FILES['file'];
+            $nom = $_POST['nom']; 
 
-            if ($authenticatedUser) {
-                $_SESSION['id'] = $authenticatedUser['id'];
-                $_SESSION['email'] = $authenticatedUser['email'];
-                $_SESSION['nom'] = $authenticatedUser['nom'];
-                $_SESSION['prenom'] = $authenticatedUser['prenom'];
-
-                header("Location: ../../front/composants/accueil/index.php"); 
-                exit;
-            } else {
-                echo "Email ou mot de passe incorrect.";
+            $uploadDir = '../../uploads/';
+            if (!is_dir($uploadDir)) {
+                mkdir($uploadDir, 0777, true);
             }
+
+            $fileName = basename($file['name']);
+            $targetFilePath = $uploadDir . $fileName;
+            $fileType = strtolower(pathinfo($targetFilePath, PATHINFO_EXTENSION));
+
+            $allowedTypes = ['mp3', 'wav', 'ogg', 'mp4', 'webm'];
+
+            if (!in_array($fileType, $allowedTypes)) {
+                echo "Format de fichier non autorisé.";
+                exit();
+            }
+
+            if (move_uploaded_file($file['tmp_name'], $targetFilePath)) {
+                try {
+                    $chanson = new Chanson();
+                    $chanson->ajouterChanson($nom, $targetFilePath, $userId);
+
+                    echo "La chanson a été téléchargée avec succès.";
+                } catch (Exception $e) {
+                    echo $e->getMessage();
+                }
+            } else {
+                echo "Erreur lors du téléchargement du fichier.";
+            }
+        } else {
+            echo "Aucun fichier n'a été téléchargé.";
         }
     }
 }
 
-$controller = new ConnexionController();
-$controller->handleForm();
-?>
+$controller = new ChansonController();
+$controller->handlePost();
