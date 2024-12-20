@@ -1,93 +1,79 @@
-# Hackathon-2024-Salle-P105
+# Hackathon 2024 - Salle P105
 
+Un hackathon (ou hakaton en français) est un événement collaboratif, souvent de nature compétitive, où des participants (développeurs, designers, entrepreneurs et autres professionnels) se réunissent pour concevoir et développer des solutions innovantes en un temps limité. Ce hackathon fait partie de la pédagogie innovante de l'UHA 4.0, axée sur les projets concrets et la collaboration.
 
+---
 
-## Getting started
+## La Problématique de Hackathon 2024
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+### Présentation
+L'association **"Chantons Noël"** organise chaque année un concours de chant permettant au vainqueur :
+- De voir sa chanson promue et diffusée lors des marchés de Noël d'Alsace.
+- De participer à un prime spécial "Noël" de la Star Academy.
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+Pour promouvoir ce concours et attirer de nouveaux sponsors, une **application web** doit être développée. Celle-ci permettra :
+- **De s'inscrire au concours et proposer une chanson de Noël.**
+- **De voter pour sa chanson préférée.**
+- **De publier la liste des vainqueurs.**
 
-## Add your files
+---
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+## Fonctionnement de l’Application
 
-```
-cd existing_repo
-git remote add origin http://git.uha4point0.fr/UHA40/hackathon/hackathon2024/hackathon-2024-salle-p105.git
-git branch -M main
-git push -uf origin main
-```
+### 1. Inscription des participants
+Lors de l'inscription, les participants doivent fournir les informations suivantes :
+- Nom et prénom (obligatoire).
+- Date de naissance.
+- Adresse postale.
+- Adresse e-mail.
+- Mot de passe.
+- Pseudo.
 
-## Integrate with your tools
+### 2. Soumission d'une chanson
+- Chaque participant inscrit peut poster une chanson, soit sous forme de vidéo, soit en fichier audio (formats acceptés : **mp3** ou **wav**).
+- Une fois postée, la chanson ne peut ni être modifiée ni supprimée.
 
-- [ ] [Set up project integrations](http://git.uha4point0.fr/UHA40/hackathon/hackathon2024/hackathon-2024-salle-p105/-/settings/integrations)
+### 3. Validation des chansons
+- L'administrateur valide les chansons avant leur publication sur la plateforme. 
+- Les chansons doivent respecter les critères suivants :
+  - Être une **chanson de Noël** (les paroles doivent évoquer les fêtes de Noël).
+  - Durer entre **2 et 3 minutes**.
+  - Être dépourvue d'effets sonores audibles (ex. vocodeur, autotune).
+  - Ne pas contenir d'insultes, d'images dégradantes ou de contenu illégal.
 
-## Collaborate with your team
+### 4. Gestion des échéances
+- L'administrateur peut configurer la **date limite** des soumissions.
+- Une fois cette date passée, la phase de vote commence.
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+### 5. Phase de vote
+- Les utilisateurs peuvent écouter les chansons et voter pour leur favorite via une interface conviviale et ergonomique.
+- Un utilisateur ne peut voter **qu'une seule fois** (identification via un identifiant unique comme une adresse e-mail ou un numéro de téléphone).
 
-## Test and Deploy
+### 6. Résultats et classement
+- L'administrateur peut clore les votes et afficher les résultats.
+- En cas d'égalité, les chansons ayant le même nombre de votes partagent la même position dans le classement.
+- L'affichage des résultats doit être interactif et en rapport avec Noël, par exemple :
+  - Un calendrier de l'Avent où chaque fenêtre correspond à une chanson classée.
+  - La chanson ayant obtenu le plus de votes étant dévoilée le 24 décembre.
 
-Use the built-in continuous integration in GitLab.
+---
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+## Contraintes Techniques
 
-***
+1. Chaque participant ne peut poster **qu'une seule chanson**.
+2. Une fois postée, une chanson ne peut être **ni modifiée ni supprimée**.
+3. Les utilisateurs ne peuvent voter **qu'une seule fois**.
+4. Les chansons ayant obtenu le même nombre de votes occupent une place **ex-aequo** dans le classement.
+5. Les technologies utilisées sont **au choix des participants**.
 
-# Editing this README
+---
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+## Points Bonus
+Le jury attribuera des points supplémentaires si :
 
-## Suggestions for a good README
+1. L'application respecte une **charte graphique de Noël**.
+2. L'application est **responsive** (adaptée aux appareils mobiles).
+3. Les participants reçoivent une **notification par e-mail** confirmant l'acceptation ou le refus de leur chanson.
+4. L'affichage des résultats est **original** et engageant.
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+---
