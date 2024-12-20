@@ -15,17 +15,18 @@ if (!isset($_SESSION['id'])) {
     <title>Chanson</title>
 </head>
 <body>
-    <header>
+<header>
     <nav class="navbar">
         <a href="../../../back/controller/logout.php" class="btn">Se déconnecter</a>
         <ul>
-            <li><a href="../accueil/index.php" class="btn">Accueil</a></li>
+        <li><a href="../accueil/index.php" class="btn">Accueil</a></li>
             <li><a href="../vote/vote.php" class="btn">Vote</a></li>
             <li><a href="../chanson/indexChanson.php" class="btn">Ajouter une chanson</a></li>
             <li><a href="../classement/classement.php" class="btn">Classement</a></li>
+            <li><a href="../admin/indexAdmin.php" class="btn">Admin</a></li>
         </ul>
     </nav>
-    </header>
+</header>
 
     <main>
         <div>
